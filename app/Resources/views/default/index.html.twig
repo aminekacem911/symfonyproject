@@ -1,0 +1,36 @@
+{% extends 'indexHome.html.twig' %}
+{% block body %}
+<h1>Bienvenue !</h1>
+{% for msg in  app.session.flashbag.get('info')%}
+{{ msg }}
+{% endfor %}
+</p>
+<table class="table table-hover table-striped" border="1">
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Category</th>
+<!--<th></th>-->
+</tr>
+</thead>
+<tbody>
+{% for produit in produits %}
+<tr>
+<td>{{produit.id}}</td>
+<td>{{produit.name}}</td>
+<td>{{produit.category}}</td>
+<!--<td>
+<a class="btn btn-primary" href="voir/{{produit.id}}">Voir</a>
+<a class="btn btn-info" href="modifier/{{produit.id}}">Modifier</a>
+<a class="btn btn-danger" href="supprimer/{{produit.id}}">Supprimer</a>
+</td>-->
+</tr>
+{% else %}
+<tr>
+<td colspan="5">Aucun produit</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
