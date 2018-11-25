@@ -14,6 +14,8 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\Form\Extension\Core\Type\FileType; 
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class DefaultController extends Controller
 {
@@ -40,8 +42,15 @@ class DefaultController extends Controller
         $produit = new produit();
         $fb = $this->createFormBuilder($produit)
         ->add('name', TextType::class)
+        ->add('image', FileType::class, array('label' => 'Photo (png, jpeg)')) 
         ->add('prix', TextType::class)
-        ->add('category',TextType::class)
+        ->add('category',ChoiceType::class, array(
+            'choices' => array(
+                'In Stock' => 'In Stock', 
+                'Out of Stock' => 'Out of Stock'
+                                )
+                                                )
+            )
         ->add('Valider', SubmitType::class);
         // générer le formulaire à partir du FormBuilder
         $form = $fb->getForm();
@@ -49,6 +58,10 @@ class DefaultController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())
         {
+            $image = $produit->getImage(); 
+            $fileName  = md5(uniqid()).'.'.$image->guessExtension(); 
+            $image->move($this->getParameter('photos_directory'), $fileName); 
+            $produit->setImage($fileName);  
             //on hydrate notre object
             $produit = $form->getData();
             //et on le sauvegarde
@@ -117,6 +130,7 @@ class DefaultController extends Controller
         {throw $this->createNotFoundException("404- produit $id inéxistant !");}
         $fb = $this->createFormBuilder($produit)
         ->add('name', TextType::class)
+        ->add('image', FileType::class, array('label' => 'Photo (png, jpeg)')) 
         ->add('prix', TextType::class)
         ->add('category',TextType::class)
         ->add('Modifier', SubmitType::class);
@@ -126,6 +140,10 @@ class DefaultController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())
         {
+            $image = $produit->getImage(); 
+            $fileName  = md5(uniqid()).'.'.$image->guessExtension(); 
+            $image->move($this->getParameter('photos_directory'), $fileName); 
+            $produit->setImage($fileName); 
             //on hydrate notre object
             $produit = $form->getData();
             //et on le sauvegarde
