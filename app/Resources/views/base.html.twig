@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/gif" href="{{ asset('fav-icon.gif') }}" />
+        <link rel="icon" type="image/gif" href="{{ asset('fav-icon.ico') }}" />
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -21,19 +21,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      
-
-       
-
-
-
-
-
-
-
-
-
-      </li>
+     
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
@@ -48,7 +36,7 @@
                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                 </a>
             {% else %}
-                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                   <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </li>
 
