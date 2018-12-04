@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<body>
+<div class="container">
+<h1>Détail du produit {{produit.name | upper}}</h1>
+
+<p>
+{% for msg in  app.session.flashbag.get('info')%}
+{{ msg }}
+{% endfor %}
+</p>
+
+<table class="table table-hover table-striped" border="1">
+<tr>
+<td>ID# : </td>
+<td>{{produit.id}}</td>
+</tr>
+<tr>
+<td>Name: </td>
+<td>{{produit.name | upper}}</td>
+</tr>
+<tr>
+<td>Image : </td>
+<td><img class="thumbnail" src="/uploads/photos/{{produit.image}}"></td>
+</tr>
+<tr>
+<td>Category : </td>
+<td>{{produit.category}}</td>
+</tr>
+<tr>
+<td>Prix : </td>
+<td>{{produit.prix}}</td>
+</tr>
+</table>
+
+
+</div>
+</body>
+<style>
+.thumbnail {
+	width: 80px;
+	height: 80px;
+}
+</style>
+{% endblock %}
