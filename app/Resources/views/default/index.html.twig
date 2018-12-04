@@ -4,41 +4,33 @@
 {% for msg in  app.session.flashbag.get('info')%}
 {{ msg }}
 {% endfor %}
-</p>
-<table class="table table-hover table-striped" border="1">
-<thead>
-<tr>
-<th>#</th>
-<th>Name</th>
-<th>Image</th>
-<th>Category</th>
-<!--<th></th>-->
-</tr>
-</thead>
-<tbody>
+
+<body >
+<div class="row">
+<div class="col-sm-6">
 {% for produit in produits %}
-<tr>
-<td>{{produit.id}}</td>
-<td>{{produit.name}}</td>
-<td><img class="thumbnail" src="/uploads/photos/{{produit.image}}"></td>
-<td>{{produit.category}}</td>
+
+<div>{{produit.name}}</div>
+<div><img class="thumbnail" class="rounded-circle" src="/uploads/photos/{{produit.image}}"></div>
+
 <style>
 .thumbnail {
-	width: 80px;
-	height: 80px;
+	width: 190px;
+	height: 190px;
+	
 }
 </style>
-<!--<td>
-<a class="btn btn-primary" href="voir/{{produit.id}}">Voir</a>
-<a class="btn btn-info" href="modifier/{{produit.id}}">Modifier</a>
-<a class="btn btn-danger" href="supprimer/{{produit.id}}">Supprimer</a>
-</td>-->
-</tr>
-{% else %}
-<tr>
-<td colspan="5">Aucun produit</td>
-</tr>
+<div>
+<a class="btn btn-primary" href="details/{{produit.id}}">Details</a>
+
+</div>
+</div>
+
+
+
 {% endfor %}
-</tbody>
-</table>
+
+</div>
+</body>
+
 {% endblock %}

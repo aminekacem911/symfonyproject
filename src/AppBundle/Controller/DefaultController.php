@@ -166,7 +166,22 @@ class DefaultController extends Controller
     }
 
 
-
+  /**
+     * @Route("/details/{id}" , name="detailsProd")
+     */
+    public function detailsAction($id)
+    {
+        //return $this->render(('@News/inscri/voir.html.twig'),array("id"=>$id));
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository(produit::class);
+        // On récupère les données de l'abonné
+        $produit = $repo->find($id);
+        // S'il n'exite pas on lance une exception (erreur 404)
+        if($produit == null)
+        throw $this->createNotFoundException("404- produit $id inéxistant !");
+        // On le passe à la vue pour l'afficher
+        return $this->render('default/details.html.twig', ["produit" => $produit]);
+    }
 
 
 }

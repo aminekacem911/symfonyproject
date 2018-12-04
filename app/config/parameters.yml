@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: test1
+    database_user: root
+    database_password: amine123
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: constact@devrows.com
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+    mailer_name: trade
