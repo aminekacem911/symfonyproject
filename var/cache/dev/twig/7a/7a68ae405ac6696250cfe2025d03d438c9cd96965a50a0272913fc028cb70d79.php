@@ -51,21 +51,37 @@ class __TwigTemplate_59b52fbe94157d44e211be89ba68437ca494c25c541aa1dad10ea170dda
 
         // line 3
         echo "<body>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <div class=\"container\">
 <h1>Ajout de produit </h1>
     ";
-        // line 6
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 6, $this->source); })()), 'form_start');
+        // line 14
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 14, $this->source); })()), 'form_start');
         echo "
         ";
-        // line 7
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 7, $this->source); })()), 'widget');
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 15, $this->source); })()), 'widget');
         echo "
     ";
-        // line 8
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 8, $this->source); })()), 'form_end');
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["f"]) || array_key_exists("f", $context) ? $context["f"] : (function () { throw new Twig_Error_Runtime('Variable "f" does not exist.', 16, $this->source); })()), 'form_end');
         echo "
 </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 </body>
 ";
         
@@ -88,7 +104,7 @@ class __TwigTemplate_59b52fbe94157d44e211be89ba68437ca494c25c541aa1dad10ea170dda
 
     public function getDebugInfo()
     {
-        return array (  66 => 8,  62 => 7,  58 => 6,  53 => 3,  44 => 2,  15 => 1,);
+        return array (  74 => 16,  70 => 15,  66 => 14,  53 => 3,  44 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -96,12 +112,28 @@ class __TwigTemplate_59b52fbe94157d44e211be89ba68437ca494c25c541aa1dad10ea170dda
         return new Twig_Source("{% extends 'base.html.twig' %}
 {% block body %}
 <body>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <div class=\"container\">
 <h1>Ajout de produit </h1>
     {{ form_start(f) }}
         {{ form_widget(f) }}
     {{ form_end(f) }}
 </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 </body>
 {% endblock %}", "default/add.html.twig", "/home/zorgan/Desktop/WORK/symfonyproject/app/Resources/views/default/add.html.twig");
     }

@@ -122,6 +122,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_index:
 
+        // about
+        if ('/aboutUs' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::aboutAction',  '_route' => 'about',);
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_about;
+            } else {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'about'));
+            }
+
+            return $ret;
+        }
+        not_about:
+
         // addprod
         if ('/addprod' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::add_ProdAction',  '_route' => 'addprod',);

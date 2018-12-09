@@ -16,7 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Form\Extension\Core\Type\FileType; 
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class DefaultController extends Controller
 {
     /**
@@ -32,9 +32,21 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig',['produits' => $produits]);
         //return $this->render('default/index.html.twig'); //update + add + delete
     }
+    /**
+     * @Route("/aboutUs/", name="about")
+     */
+    public function aboutAction()
+    {
+        
+      
+       
+        return $this->render('about.html.twig');
+
+    }
 
     /**
      * @Route("/addprod/" , name="addprod")
+    * @Security("has_role('ROLE_USER')")
      */
     public function add_ProdAction(Request $request)
     {
@@ -83,6 +95,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/delprod/{id}" , name="delprod")
+      * @Security("has_role('ROLE_USER')")
      */
     public function del_ProdAction(Request $request, $id)
     {
@@ -117,6 +130,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/updateprod/{id}" , name="updateprod")
+      * @Security("has_role('ROLE_USER')")
      */
 
     public function inscri_modifierAction(Request $request, $id){

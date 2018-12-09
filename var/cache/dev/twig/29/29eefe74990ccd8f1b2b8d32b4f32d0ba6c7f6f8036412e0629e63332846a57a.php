@@ -51,19 +51,28 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
 
         // line 3
         echo "<body>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 <div class=\"container\">
 <h1>Détail du produit ";
-        // line 5
-        echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 5, $this->source); })()), "name", array())), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 14, $this->source); })()), "name", array())), "html", null, true);
         echo "</h1>
 
 <p>
 ";
-        // line 8
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 8, $this->source); })()), "session", array()), "flashbag", array()), "get", array(0 => "info"), "method"));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 17, $this->source); })()), "session", array()), "flashbag", array()), "get", array(0 => "info"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
-            // line 9
+            // line 18
             echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
             echo "
 ";
@@ -71,43 +80,43 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 20
         echo "</p>
 
 <table class=\"table table-hover table-striped\" border=\"1\">
 <tr>
 <td>ID# : </td>
 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 16, $this->source); })()), "id", array()), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 25, $this->source); })()), "id", array()), "html", null, true);
         echo "</td>
 </tr>
 <tr>
 <td>Name: </td>
 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 20, $this->source); })()), "name", array())), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 29, $this->source); })()), "name", array())), "html", null, true);
         echo "</td>
 </tr>
 <tr>
 <td>Image : </td>
 <td><img class=\"thumbnail\" src=\"/uploads/photos/";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 24, $this->source); })()), "image", array()), "html", null, true);
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 33, $this->source); })()), "image", array()), "html", null, true);
         echo "\"></td>
 </tr>
 <tr>
 <td>Category : </td>
 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 28, $this->source); })()), "category", array()), "html", null, true);
+        // line 37
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 37, $this->source); })()), "category", array()), "html", null, true);
         echo "</td>
 </tr>
 <tr>
 <td>Prix : </td>
 <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 32, $this->source); })()), "prix", array()), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new Twig_Error_Runtime('Variable "produit" does not exist.', 41, $this->source); })()), "prix", array()), "html", null, true);
         echo "</td>
 </tr>
 </table>
@@ -121,6 +130,14 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
 \theight: 80px;
 }
 </style>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -142,7 +159,7 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
 
     public function getDebugInfo()
     {
-        return array (  110 => 32,  103 => 28,  96 => 24,  89 => 20,  82 => 16,  75 => 11,  67 => 9,  63 => 8,  57 => 5,  53 => 3,  44 => 2,  15 => 1,);
+        return array (  119 => 41,  112 => 37,  105 => 33,  98 => 29,  91 => 25,  84 => 20,  76 => 18,  72 => 17,  66 => 14,  53 => 3,  44 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -150,6 +167,15 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
         return new Twig_Source("{% extends 'base.html.twig' %}
 {% block body %}
 <body>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 <div class=\"container\">
 <h1>Détail du produit {{produit.name | upper}}</h1>
 
@@ -191,6 +217,14 @@ class __TwigTemplate_0c12f7a41e554785fc1d6b41c278379d56cff334074500f6a7aaa623f2e
 \theight: 80px;
 }
 </style>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 {% endblock %}", "default/details.html.twig", "/home/zorgan/Desktop/WORK/symfonyproject/app/Resources/views/default/details.html.twig");
     }
 }

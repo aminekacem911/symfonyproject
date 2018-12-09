@@ -50,20 +50,25 @@ class __TwigTemplate_8b0afd2b11607ef37dd6f5669bd8cc306d398330dc4f5bd3435bc2762a0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 6
-        echo "    <p>";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("registration.confirmed", array("%username%" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 6, $this->source); })()), "username", array())), "FOSUserBundle"), "html", null, true);
+        echo "</br></br></br></br></br></br></br></br></br></br></br></br>
+    <p>";
+        // line 7
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("registration.confirmed", array("%username%" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 7, $this->source); })()), "username", array())), "FOSUserBundle"), "html", null, true);
         echo "</p>
     ";
-        // line 7
-        if ((isset($context["targetUrl"]) || array_key_exists("targetUrl", $context) ? $context["targetUrl"] : (function () { throw new Twig_Error_Runtime('Variable "targetUrl" does not exist.', 7, $this->source); })())) {
-            // line 8
+        // line 8
+        if ((isset($context["targetUrl"]) || array_key_exists("targetUrl", $context) ? $context["targetUrl"] : (function () { throw new Twig_Error_Runtime('Variable "targetUrl" does not exist.', 8, $this->source); })())) {
+            // line 9
             echo "    <p><a href=\"";
-            echo twig_escape_filter($this->env, (isset($context["targetUrl"]) || array_key_exists("targetUrl", $context) ? $context["targetUrl"] : (function () { throw new Twig_Error_Runtime('Variable "targetUrl" does not exist.', 8, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["targetUrl"]) || array_key_exists("targetUrl", $context) ? $context["targetUrl"] : (function () { throw new Twig_Error_Runtime('Variable "targetUrl" does not exist.', 9, $this->source); })()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("registration.back", array(), "FOSUserBundle"), "html", null, true);
             echo "</a></p>
     ";
         }
+        // line 11
+        echo "    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -84,7 +89,7 @@ class __TwigTemplate_8b0afd2b11607ef37dd6f5669bd8cc306d398330dc4f5bd3435bc2762a0
 
     public function getDebugInfo()
     {
-        return array (  60 => 8,  58 => 7,  53 => 6,  44 => 5,  15 => 1,);
+        return array (  70 => 11,  62 => 9,  60 => 8,  56 => 7,  53 => 6,  44 => 5,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -94,10 +99,12 @@ class __TwigTemplate_8b0afd2b11607ef37dd6f5669bd8cc306d398330dc4f5bd3435bc2762a0
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
+</br></br></br></br></br></br></br></br></br></br></br></br>
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
+    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 {% endblock fos_user_content %}
 ", "@FOSUser/Registration/confirmed.html.twig", "/home/zorgan/Desktop/WORK/symfonyproject/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig");
     }

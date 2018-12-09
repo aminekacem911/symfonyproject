@@ -27,13 +27,10 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
 
         // line 2
         echo "<div class=\"container\">
+</br></br></br></br></br></br></br></br></br></br>
 <div class=\"fos_user_user_show\">
     <div class=\"container emp-profile\">
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
+    
             <form method=\"post\">
                 <div class=\"row\">
                     <div class=\"col-md-4\">
@@ -44,37 +41,17 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                     </div>
                     <div class=\"col-md-6\">
                         <div class=\"profile-head\">
-                                    <h5>
-                                        Kshiti Ghelani
-                                    </h5>
-                                  
-                            <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">
-                                <li class=\"nav-item\">
-                                    <a class=\"nav-link active\" id=\"home-tab\" data-toggle=\"tab\" href=\"#home\" role=\"tab\" aria-controls=\"home\" aria-selected=\"true\">About</a>
-                                </li>
-                                <li class=\"nav-item\">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-md-2\">
-                        <input type=\"submit\" class=\"profile-edit-btn\" name=\"btnAddMore\" value=\"Edit Profile\"/>
-                    </div>
-                </div>
-                <div class=\"row\">
-                    
-                    </div>
-                    <div class=\"col-md-8\">
-                        <div class=\"tab-content profile-tab\" id=\"myTabContent\">
-                            <div class=\"tab-pane fade show active\" id=\"home\" role=\"tabpanel\" aria-labelledby=\"home-tab\">
-                                        <div class=\"row\">
+                                    <h3>
+                                        Profile User:
+                                    </h3>
+                                    <div class=\"row\">
                                             <div class=\"col-md-6\">
                                                 <label>User Id</label>
                                             </div>
                                             <div class=\"col-md-6\">
                                                 <p>";
-        // line 48
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 48, $this->source); })()), "username", array()), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 25, $this->source); })()), "username", array()), "html", null, true);
         echo "</p>
                                             </div>
                                         </div>
@@ -84,8 +61,8 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                                             </div>
                                             <div class=\"col-md-6\">
                                                 <p>";
-        // line 56
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 56, $this->source); })()), "firstName", array()), "html", null, true);
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 33, $this->source); })()), "firstName", array()), "html", null, true);
         echo " </p>
                                             </div>
                                         </div>
@@ -95,8 +72,8 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                                             </div>
                                             <div class=\"col-md-6\">
                                                 <p>";
-        // line 64
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 64, $this->source); })()), "lastName", array()), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 41, $this->source); })()), "lastName", array()), "html", null, true);
         echo " </p>
                                             </div>
                                         </div>
@@ -106,8 +83,8 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                                             </div>
                                             <div class=\"col-md-6\">
                                                <p> ";
-        // line 72
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 72, $this->source); })()), "email", array()), "html", null, true);
+        // line 49
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 49, $this->source); })()), "email", array()), "html", null, true);
         echo "</p>
                                             </div>
                                         </div>
@@ -117,19 +94,28 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                                             </div>
                                             <div class=\"col-md-6\">
                                                  <p> ";
-        // line 80
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 80, $this->source); })()), "number", array()), "html", null, true);
+        // line 57
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 57, $this->source); })()), "number", array()), "html", null, true);
         echo "</p>
                                             </div>
                                         
-                            </div>
-                            <div class=\"tab-pane fade\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">
-                                      
-            </form>     
-</div>
-</div>
+                                  
+                           
+                        </div>
+                    </div>
 
-";
+                </div>
+                </br></br></br></br></br></br></br>
+                
+                        
+                           
+                                      
+            </form>  
+           
+</div>
+</div>
+</br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -150,20 +136,17 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
 
     public function getDebugInfo()
     {
-        return array (  121 => 80,  110 => 72,  99 => 64,  88 => 56,  77 => 48,  29 => 2,);
+        return array (  98 => 57,  87 => 49,  76 => 41,  65 => 33,  54 => 25,  29 => 2,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% trans_default_domain 'FOSUserBundle' %}
 <div class=\"container\">
+</br></br></br></br></br></br></br></br></br></br>
 <div class=\"fos_user_user_show\">
     <div class=\"container emp-profile\">
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
+    
             <form method=\"post\">
                 <div class=\"row\">
                     <div class=\"col-md-4\">
@@ -174,30 +157,10 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                     </div>
                     <div class=\"col-md-6\">
                         <div class=\"profile-head\">
-                                    <h5>
-                                        Kshiti Ghelani
-                                    </h5>
-                                  
-                            <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">
-                                <li class=\"nav-item\">
-                                    <a class=\"nav-link active\" id=\"home-tab\" data-toggle=\"tab\" href=\"#home\" role=\"tab\" aria-controls=\"home\" aria-selected=\"true\">About</a>
-                                </li>
-                                <li class=\"nav-item\">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-md-2\">
-                        <input type=\"submit\" class=\"profile-edit-btn\" name=\"btnAddMore\" value=\"Edit Profile\"/>
-                    </div>
-                </div>
-                <div class=\"row\">
-                    
-                    </div>
-                    <div class=\"col-md-8\">
-                        <div class=\"tab-content profile-tab\" id=\"myTabContent\">
-                            <div class=\"tab-pane fade show active\" id=\"home\" role=\"tabpanel\" aria-labelledby=\"home-tab\">
-                                        <div class=\"row\">
+                                    <h3>
+                                        Profile User:
+                                    </h3>
+                                    <div class=\"row\">
                                             <div class=\"col-md-6\">
                                                 <label>User Id</label>
                                             </div>
@@ -237,13 +200,22 @@ class __TwigTemplate_e8be44f881fb68cc7acb3b4adee0355285d227512b3815983c4026c76f3
                                                  <p> {{ user.number }}</p>
                                             </div>
                                         
-                            </div>
-                            <div class=\"tab-pane fade\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">
-                                      
-            </form>     
-</div>
-</div>
+                                  
+                           
+                        </div>
+                    </div>
 
-", "@FOSUser/Profile/show_content.html.twig", "/home/zorgan/Desktop/WORK/symfonyproject/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig");
+                </div>
+                </br></br></br></br></br></br></br>
+                
+                        
+                           
+                                      
+            </form>  
+           
+</div>
+</div>
+</br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br>", "@FOSUser/Profile/show_content.html.twig", "/home/zorgan/Desktop/WORK/symfonyproject/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig");
     }
 }

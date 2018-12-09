@@ -1,63 +1,124 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-       
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/gif" href="{{ asset('fav-icon.ico') }}" />
-    </head>
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<html lang="en">
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  {% block stylesheets %}
+        <link rel="icon" type="image/gif" href="{{ asset('fav-icon.ico') }}" />
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+  {% endblock %}
+</head>
+
+<body class="homepage">
+  <header id="header">
+    <nav class="navbar navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          
+          
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">AboutUs</a>
       </li>
+
+      
      
-    </ul>
+    
      <li class="nav-link">
+     
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <span style="border-style: solid; color:red;"> 
+                <span style="border-style: solid; color:red;"> {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} </span>
+                </span>
                 <a href="{{ path('fos_user_security_logout') }}">
                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                 </a>
+                
             {% else %}
-                   <a color="red" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                   <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </li>
-
-    <form class="form-inline my-2 my-lg-0">
+      
+        </div>
+</ul>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            
+           <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 
     </form>
-  </div>
-</nav>
-            <div class="container">
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+
+  </header>
+  <!--/header-->
+
+
+ <div class="container">
         {% block body %}
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        {% endblock %}
+          
+        <link rel="icon" type="image/gif" href="{{ asset('fav-icon.ico') }}" />
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+  {% endblock %}
+        
                  </div>
-        {% block javascripts %} {% endblock %}
-        {% block footer %}
-    </body>
-    <hr>
-    <center>POWERED BY AMINE AND LOUAY</center>
-    {% endblock %}
+
+
+  <!--/#bottom-->
+
+ {% block footer %}
+  <!--/#bottom-->
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="social">
+            <ul class="social-share">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.container-->
+  </div>
+  <!--/.top-bar-->
+
+  <footer id="footer" class="midnight-blue">
+    <div class="container">
+      <div class="row">
+        <center>POWERED BY AMINE AND LOUAY</center>
+    </div>
+  </footer>
+  <!--/#footer-->
+
+
+</body>
+{% endblock %}
 </html>
